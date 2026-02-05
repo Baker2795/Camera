@@ -29,7 +29,7 @@ struct CameraManagerAttributes {
     var mirrorOutput: Bool = false
     var isGridVisible: Bool = true
 
-    var deviceOrientation: AVCaptureVideoOrientation = .portrait
+    var deviceOrientation: AVCaptureVideoOrientation = .landscapeLeft
     var frameOrientation: CGImagePropertyOrientation = .right
     var orientationLocked: Bool = false
     var userBlockedScreenRotation: Bool = false

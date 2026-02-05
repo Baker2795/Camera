@@ -52,7 +52,7 @@ private extension CameraManagerMotionManager {
         if newUserBlockedScreenRotation != parent.attributes.userBlockedScreenRotation { parent.attributes.userBlockedScreenRotation = newUserBlockedScreenRotation }
     }
     func updateFrameOrientation() { if UIDevice.current.orientation != .portraitUpsideDown {
-        let newFrameOrientation = getNewFrameOrientation(parent.attributes.orientationLocked ? .portrait : UIDevice.current.orientation)
+        let newFrameOrientation = getNewFrameOrientation(parent.attributes.orientationLocked ? .landscapeLeft : UIDevice.current.orientation)
         updateFrameOrientation(newFrameOrientation)
     }}
     func redrawGrid() { if !parent.attributes.orientationLocked {

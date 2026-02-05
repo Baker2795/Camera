@@ -144,7 +144,7 @@ private extension MCamera {
 }
 private extension MCamera {
     func lockScreenOrientation(_ orientation: UIInterfaceOrientationMask?) {
-        config.appDelegate?.orientationLock = orientation ?? .all
+        config.appDelegate?.orientationLock = orientation ?? config.originalOrientationLock
         UINavigationController.attemptRotationToDeviceOrientation()
     }
     func notifyUserOfMediaCaptured(_ capturedMedia: MCameraMedia) {
@@ -158,7 +158,7 @@ private extension MCamera {
     func onCameraAppear() { Task {
         do {
             try await manager.setup()
-            lockScreenOrientation(.portrait)
+            lockScreenOrientation(.landscapeRight) // controls ui
         } catch { print("(MijickCamera) ERROR DURING SETUP: \(error)") }
     }}
     func onCameraDisappear() {
