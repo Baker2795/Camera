@@ -386,7 +386,7 @@ public extension MCamera {
      */
     func lockCameraInPortraitOrientation(_ appDelegate: MApplicationDelegate.Type) -> Self {
         config.appDelegate = appDelegate
-        config.originalOrientationLock = appDelegate.orientationLock
+        config.originalOrientationLock = .landscapeRight
         manager.attributes.orientationLocked = true
 
         return self

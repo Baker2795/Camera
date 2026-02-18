@@ -228,6 +228,6 @@ public extension MCameraScreen {
     var hasLight: Bool { cameraManager.hasLight }
     var recordingTime: MTime { cameraManager.videoOutput.recordingTime }
     var isRecording: Bool { cameraManager.videoOutput.timer.timerStatus == .running }
-    var isOrientationLocked: Bool { cameraManager.attributes.orientationLocked || cameraManager.attributes.userBlockedScreenRotation }
+    var isOrientationLocked: Bool { true }
     var deviceOrientation: AVCaptureVideoOrientation { cameraManager.attributes.deviceOrientation }
 }
